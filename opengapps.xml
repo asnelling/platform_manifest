@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="opengapps-gitlab" fetch="https://gitlab.opengapps.org/opengapps/"  />
+
+    <project groups="opengapps" path="vendor/opengapps/build" name="opengapps/aosp_build" revision="master" remote="github" />
+
+    <project groups="opengapps" path="vendor/opengapps/sources/all" name="opengapps/all" clone-depth="1" revision="master" remote="opengapps-gitlab" />
+
+      <!-- arm64 depends on arm -->
+    <project groups="opengapps" path="vendor/opengapps/sources/arm" name="opengapps/arm" clone-depth="1" revision="master" remote="opengapps-gitlab" />
+    <project groups="opengapps" path="vendor/opengapps/sources/arm64" name="opengapps/arm64" clone-depth="1" revision="master" remote="opengapps-gitlab" />
+
+    <project groups="opengapps" path="vendor/opengapps/sources/x86" name="opengapps/x86" clone-depth="1" revision="master" remote="opengapps-gitlab" />
+    <project groups="opengapps" path="vendor/opengapps/sources/x86_64" name="opengapps/x86_64" clone-depth="1" revision="master" remote="opengapps-gitlab" />
+</manifest>

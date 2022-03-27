@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="github" fetch="https://github.com/" revision="xdroid-12" />
+
+  <include name="aosp_manifest/default.xml" />
+  <include name="opengapps.xml" />
+
+  <remove-project name="platform/build" />
+  <project path="build/make" name="asnelling/platform_build" groups="pdk" remote="github">
+    <copyfile src="core/root.mk" dest="Makefile"/>
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk"/>
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default"/>
+    <linkfile src="core" dest="build/core"/>
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh"/>
+    <linkfile src="target" dest="build/target"/>
+    <linkfile src="tools" dest="build/tools"/>
+  </project>
+  
+  <remove-project name="device/google/crosshatch" />
+  <project path="device/google/crosshatch" name="asnelling/device_google_crosshatch" remote="github" />
+</manifest>

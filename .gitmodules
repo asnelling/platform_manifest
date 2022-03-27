@@ -1,0 +1,4 @@
+[submodule "aosp_manifest"]
+	path = aosp_manifest
+	url = https://android.googlesource.com/platform/manifest
+	branch = android-12.0.0_r31
